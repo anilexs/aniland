@@ -1,0 +1,24 @@
+{
+    "lang": {
+        "fr": {
+            "iso" : "Francés",
+            "flag" : "fr.png"
+        },
+        "en": {
+            "iso" : "Inglés",
+            "flag" : "en.png"
+        },
+        "es": {
+            "iso" : "Español",
+            "flag" : "es.png"
+        },
+        "jp": {
+            "iso" : "Japón",
+            "flag" : "jp.png"
+        }
+    },
+    "home": "Bienvenida",
+    "earn": "Ganar dinero",
+    "login": "Conexión",
+    "SignUp": "Inscripción"
+}

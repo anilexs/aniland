@@ -1,0 +1,24 @@
+{
+    "lang": {
+        "fr": {
+            "iso" : "French",
+            "flag" : "fr.png"
+        },
+        "en": {
+            "iso" : "English",
+            "flag" : "en.png"
+        },
+        "es": {
+            "iso" : "Spanish",
+            "flag" : "es.png"
+        },
+        "jp": {
+            "iso" : "Japan",
+            "flag" : "jp.png"
+        }
+    },
+    "home": "Home",
+    "earn": "earn money",
+    "login": "Login",
+    "SignUp": "Sign Up"
+}

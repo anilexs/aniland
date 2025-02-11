@@ -1,0 +1,24 @@
+{
+    "lang": {
+        "fr": {
+            "iso" : "フランス語",
+            "flag" : "fr.png"
+        },
+        "en": {
+            "iso" : "英語",
+            "flag" : "en.png"
+        },
+        "es": {
+            "iso" : "スペイン語",
+            "flag" : "es.png"
+        },
+        "jp": {
+            "iso" : "日本",
+            "flag" : "jp.png"
+        }
+    },
+    "home": "ホーム",
+    "earn": "お金を稼ぐ",
+    "login": "接続",
+    "SignUp": "登録"
+}

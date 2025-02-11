@@ -1,0 +1,23 @@
+{
+  "name": "!_tcgzone",
+  "version": "1.0.0",
+  "description": "configure un proget js\r npm init -y",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anilexs/-_tcgZone.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anilexs/-_tcgZone/issues"
+  },
+  "homepage": "https://github.com/anilexs/-_tcgZone#readme",
+  "dependencies": {
+    "ws": "^8.18.0"
+  }
+}

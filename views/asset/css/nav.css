@@ -1,0 +1,135 @@
+html, body {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.left {
+    z-index: 50;
+    position: absolute;
+    width: 109px;
+    height: 100%; 
+    border-right: 2px solid greenyellow;
+    background-color: #17191F;
+    transition: width 0.5s ease; /* Ajout de la transition */
+}
+
+.left:hover {
+    width: 300px;
+}
+
+.left nav ul li{
+    list-style-type: none;
+    width: 75px;
+    height: 9vh;
+    margin-left: 16px;
+}
+
+.opt {
+    display: flex;
+    align-items: center;
+    width: 75px;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 2px solid white;
+    transition: width 0.5s ease;
+}
+
+.left:hover .opt {
+    width: 200px;
+}
+
+.opt:hover{
+    border: 2px solid greenyellow;
+}
+
+
+/* lang select */
+.langLi {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.optLangue{
+    position: absolute;
+    flex-direction: column-reverse;
+    left: 125%; 
+    bottom: 0;
+    width: 200px;
+    /* height: calc(75px * 5); */
+    overflow: auto;
+}
+
+.left:hover .optLangue{
+    left: 400%;
+}
+
+.langOpt{
+    border: 2px solid white;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    height: 70px;
+    width: 100%;
+}
+
+.flagOpt img{
+    width: 80px;
+    height: 50px;
+    margin-left: 10px;
+}
+.isoOpt{
+    color: white;
+    margin-left: 15px;
+}
+/* end lang select */
+
+.text{
+    color: white;
+    white-space: nowrap;
+    user-select: none;
+}
+
+.logo {
+    background-color: transparent;
+    color: white;
+    width: 75px;
+    height: 75px;
+    font-size: 30px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    margin-left: -1.8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo:hover{
+    color: greenyellow;
+}
+
+.flag{
+    width: 75px;
+    height: 75px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -2px;
+}
+
+.flag img{
+    width: 70%;
+    height: 60%;
+}
+
+.right {
+    z-index: 49;
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: calc(100% - 109px);
+}
