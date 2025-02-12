@@ -29,15 +29,15 @@ html, body {
 .opt {
     display: flex;
     align-items: center;
-    width: 75px;
+    min-width: 75px;
     overflow: hidden;
     border-radius: 10px;
     border: 2px solid white;
-    transition: width 0.5s ease;
+    transition: min-width 0.5s ease;
 }
 
 .left:hover .opt {
-    width: 200px;
+    min-width: 200px;
 }
 
 .opt:hover{

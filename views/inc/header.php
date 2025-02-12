@@ -2,6 +2,7 @@
     $host = "http://localhost/aniland/";
     
     $lang = isset($_COOKIE['lang']) ? $_COOKIE['lang'] : substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
+    // $lang = 'en';
 
     $translations_url = "{$host}lang/{$lang}.json";
     

@@ -11,15 +11,15 @@ if(isset($_COOKIE[''])){ ?>
             <li>
                 <div class="opt">
                     <div class="logo"><i class="fa-solid fa-house"></i></div>
-                    <div class="text">Accueil</div>
+                    <div class="text"><?= $trad['home'] ?></div>
                 </div>
             </li>
-            <li>
+            <!-- <li>
                 <div class="opt">
                     <div class="logo"><i class="fa-solid fa-user"></i></div>
                     <div class="text">profile</div>
                 </div>
-            </li>
+            </li> -->
             <li>
                 <div class="opt">
                     <div class="logo"><i class="fa-solid fa-sack-dollar"></i></div>
