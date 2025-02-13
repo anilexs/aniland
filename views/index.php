@@ -7,6 +7,21 @@ require_once "inc/header.php"; ?>
     <?php require_once "inc/nav.php"; ?>
 </div>
 <div class="right">
-    
+    <?php
+
+    if (in_array($geo, $allowedPages) && file_exists('load/'.$geo.'.php')) { ?>
+        <div class="rightOpt p-<?= $geo ?> on">
+            <?php require_once 'load/'.$geo.'.php'; ?>
+        </div>
+
+        <?php foreach ($allowedPages as $page) {
+            if($page !== $geo){ ?>
+                <div class="rightOpt p-<?= $page ?> off"></div>
+            <?php }
+        } ?>
+    <?php } else {
+        echo "Page introuvable";
+    }
+    ?>
 </div>
 <?php require_once "inc/footer.php"; ?>

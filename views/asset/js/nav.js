@@ -1,34 +1,64 @@
+var allowedPages = ['home', 'profil', 'contact'];
+
 $(document).ready(function(){
-    $('.langOpt').on('click', function (e) {
-        var ISO  = $(this).find('img').attr('alt');
-        var img = $(this).find('img').attr('src');
-        var langue = $(this).find('.langTxt').text(); 
+    var url = window.location.href;
+    var lastSegment = url.substring(url.lastIndexOf('/') + 1);
+    var geo = (lastSegment == '') ? 'home' : lastSegment;
 
-        $('.imgSelect').attr('src', img)
-        $('.langTxtDefaux').text(langue)
-
-        document.cookie = 'lang=' + ISO + '; path=/; max-age=31536000';
-        location.reload();
-    });     
+    allowedPages.forEach(page => {
+        if (page !== geo && $(".p-" + page).is(":empty")) { 
+            $(".p-" + page).load("load/" + page + ".php", function() {
+                console.log(page + " chargé");
+            });
+        }
+    });
 });
 
+
+function setup(geo){
+    $('.rightOpt').removeClass('on').addClass('off');
+    $('.p-'+geo).removeClass('off').addClass('on');
+}
+
+
 $(document).on('click', '.home', function (e) {
+    setup('home');
     e.preventDefault();
     history.pushState(null, "", window.location.pathname.split('/').slice(0, 2).join('/') + '/');
 });
 
-
 $(document).on('click', '.profil', function (e) {
-    e.preventDefault();
     history.pushState(null, "", 'profil');
+    setup('profil');
+    e.preventDefault();
 });
 
 $(document).on('click', '.wall', function (e) {
+    setup('wall');
     e.preventDefault();
     history.pushState(null, "", 'wall');
 });
 
+$(document).on('click', '.concours', function (e) {
+    setup('concours');
+    e.preventDefault();
+    history.pushState(null, "", 'concours');
+});
+
+$(document).on('click', '.leaderboard', function (e) {
+    setup('leaderboard');
+    e.preventDefault();
+    history.pushState(null, "", 'leaderboard');
+});
+
+$(document).on('click', '.arcade', function (e) {
+    setup('arcade');
+    e.preventDefault();
+    history.pushState(null, "", 'arcade');
+});
+
 $(document).on('click', '.parametres', function (e) {
+    setup('parametres');
     e.preventDefault();
     history.pushState(null, "", 'parametres');
 });

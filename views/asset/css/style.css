@@ -50,3 +50,21 @@ body{
 .left:hover {
   width: 300px;
 }
+
+.right {
+  z-index: 49;
+  position: absolute;
+  right: 0;
+  height: 100%;
+  width: calc(100% - 109px);
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.on{
+  display: block;
+}
+
+.off{
+  display: none;
+}

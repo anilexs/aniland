@@ -1,5 +1,8 @@
 <?php
     $host = "http://localhost/aniland/";
+
+    $geo = !empty($_GET['g']) ? $_GET['g'] : 'home';
+    $allowedPages = ['home', 'profil', 'contact']; 
     
     $lang = isset($_COOKIE['anitrad']) ? $_COOKIE['anitrad'] : substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
     // $lang = 'fr';

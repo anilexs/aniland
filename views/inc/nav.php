@@ -27,15 +27,21 @@ if(isset($_COOKIE[''])){ ?>
                 </div>
             </li>
             <li>
-                <div class="opt">
+                <div class="opt concours">
                     <div class="logo"><i class="fas fa-gift"></i></div>
                     <div class="text">concours</div>
                 </div>
             </li>
             <li>
-                <div class="opt">
+                <div class="opt leaderboard">
                     <div class="logo"><i class="fa-solid fa-list-ul"></i></div>
                     <div class="text">classement</div>
+                </div>
+            </li>
+            <li>
+                <div class="opt arcade">
+                    <div class="logo"><i class="fa-solid fa-gamepad"></i></div>
+                    <div class="text">arcad</div>
                 </div>
             </li>
             <li>
