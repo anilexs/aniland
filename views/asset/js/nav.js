@@ -7,9 +7,7 @@ $(document).ready(function(){
 
     allowedPages.forEach(page => {
         if (page !== geo && $(".p-" + page).is(":empty")) { 
-            $(".p-" + page).load("load/" + page + ".php", function() {
-                console.log(page + " chargé");
-            });
+            $(".p-" + page).load("load/" + page + ".php");
         }
     });
 });
@@ -22,45 +20,61 @@ function setup(geo){
 
 
 $(document).on('click', '.home', function (e) {
-    setup('home');
-    e.preventDefault();
-    history.pushState(null, "", window.location.pathname.split('/').slice(0, 2).join('/') + '/');
+    if ($('.p-home').hasClass('off')) {
+        setup('home');
+        e.preventDefault();
+        history.pushState(null, "", window.location.pathname.split('/').slice(0, 2).join('/') + '/');
+        console.log("on");
+    }
+    
 });
 
 $(document).on('click', '.profil', function (e) {
-    history.pushState(null, "", 'profil');
-    setup('profil');
-    e.preventDefault();
+    if ($('.p-profil').hasClass('off')) {
+        history.pushState(null, "", 'profil');
+        setup('profil');
+        e.preventDefault();
+    }
 });
 
 $(document).on('click', '.wall', function (e) {
-    setup('wall');
-    e.preventDefault();
-    history.pushState(null, "", 'wall');
+    if ($('.p-wall').hasClass('off')) {
+        setup('wall');
+        e.preventDefault();
+        history.pushState(null, "", 'wall');
+    }
 });
 
 $(document).on('click', '.concours', function (e) {
-    setup('concours');
-    e.preventDefault();
-    history.pushState(null, "", 'concours');
+    if ($('.p-concours').hasClass('off')) {
+        setup('concours');
+        e.preventDefault();
+        history.pushState(null, "", 'concours');
+    }
 });
 
 $(document).on('click', '.leaderboard', function (e) {
-    setup('leaderboard');
-    e.preventDefault();
-    history.pushState(null, "", 'leaderboard');
+    if ($('.p-leaderboard').hasClass('off')) {
+        setup('leaderboard');
+        e.preventDefault();
+        history.pushState(null, "", 'leaderboard');
+    }
 });
 
 $(document).on('click', '.arcade', function (e) {
-    setup('arcade');
-    e.preventDefault();
-    history.pushState(null, "", 'arcade');
+    if ($('.p-arcade').hasClass('off')) {
+        setup('arcade');
+        e.preventDefault();
+        history.pushState(null, "", 'arcade');
+    }
 });
 
 $(document).on('click', '.parametres', function (e) {
-    setup('parametres');
-    e.preventDefault();
-    history.pushState(null, "", 'parametres');
+    if ($('.p-parametres').hasClass('off')) {
+        setup('parametres');
+        e.preventDefault();
+        history.pushState(null, "", 'parametres');
+    }
 });
 
 var langNewEtat;
