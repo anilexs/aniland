@@ -1,9 +1,9 @@
 <?php
     $host = "http://localhost/aniland/";
     
-    $lang = isset($_COOKIE['lang']) ? $_COOKIE['lang'] : substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
-    // $lang = 'en';
-
+    $lang = isset($_COOKIE['anitrad']) ? $_COOKIE['anitrad'] : substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
+    // $lang = 'fr';
+    
     $translations_url = "{$host}lang/{$lang}.json";
     
     $json_content = file_get_contents($translations_url);
@@ -29,7 +29,6 @@
         //     'lang' => $iso['iso']
         // ];
     }
-
 ?>
 <!DOCTYPE html>
 <html lang="<?= $lang ?>">

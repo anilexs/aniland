@@ -9,21 +9,21 @@ if(isset($_COOKIE[''])){ ?>
     <nav>
         <ul>
             <li>
-                <div class="opt">
+                <div class="opt home">
                     <div class="logo"><i class="fa-solid fa-house"></i></div>
                     <div class="text"><?= $trad['home'] ?></div>
                 </div>
             </li>
-            <!-- <li>
-                <div class="opt">
-                    <div class="logo"><i class="fa-solid fa-user"></i></div>
-                    <div class="text">profile</div>
-                </div>
-            </li> -->
             <li>
-                <div class="opt">
+                <div class="opt profil">
+                    <div class="logo"><i class="fa-solid fa-user"></i></div>
+                    <div class="text"><?= $trad['profil'] ?></div>
+                </div>
+            </li>
+            <li>
+                <div class="opt wall">
                     <div class="logo"><i class="fa-solid fa-sack-dollar"></i></div>
-                    <div class="text">mur d'offre</div>
+                    <div class="text"><?= $trad['wall'] ?></div>
                 </div>
             </li>
             <li>
@@ -36,6 +36,12 @@ if(isset($_COOKIE[''])){ ?>
                 <div class="opt">
                     <div class="logo"><i class="fa-solid fa-list-ul"></i></div>
                     <div class="text">classement</div>
+                </div>
+            </li>
+            <li>
+                <div class="opt parametres">
+                    <div class="logo"><i class="fa-solid fa-gear"></i></div>
+                    <div class="text">paramètres</div>
                 </div>
             </li>
             <li class="langLi">
@@ -51,7 +57,7 @@ if(isset($_COOKIE[''])){ ?>
                         <?php } ?>
                     <?php } ?>
                 </div>
-                <div class="opt">
+                <div class="opt lang">
                     <div class="flag">
                         <img src="<?= $country[$lang]['flag'] ?>" alt="">
                     </div>

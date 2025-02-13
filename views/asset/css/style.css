@@ -36,3 +36,17 @@ body{
 ::-webkit-scrollbar-track {
   background-color: #363636; 
 }
+
+.left {
+  z-index: 50;
+  position: absolute;
+  width: 109px;
+  height: 100%; 
+  border-right: 2px solid greenyellow;
+  background-color: #17191F;
+  transition: width 0.5s ease; /* Ajout de la transition */
+}
+
+.left:hover {
+  width: 300px;
+}

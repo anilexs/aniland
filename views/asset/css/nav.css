@@ -5,20 +5,6 @@ html, body {
     display: flex;
 }
 
-.left {
-    z-index: 50;
-    position: absolute;
-    width: 109px;
-    height: 100%; 
-    border-right: 2px solid greenyellow;
-    background-color: #17191F;
-    transition: width 0.5s ease; /* Ajout de la transition */
-}
-
-.left:hover {
-    width: 300px;
-}
-
 .left nav ul li{
     list-style-type: none;
     width: 75px;
@@ -53,17 +39,18 @@ html, body {
 }
 
 .optLangue{
+    display: none;
     position: absolute;
     flex-direction: column-reverse;
+    overflow: auto;
     left: 125%; 
     bottom: 0;
     width: 200px;
     /* height: calc(75px * 5); */
-    overflow: auto;
 }
 
 .left:hover .optLangue{
-    left: 400%;
+    left: 379%;
 }
 
 .langOpt{
@@ -72,7 +59,8 @@ html, body {
     align-items: center;
     border-radius: 10px;
     height: 70px;
-    width: 100%;
+    width: 90%;
+    margin: auto;
 }
 
 .flagOpt img{
