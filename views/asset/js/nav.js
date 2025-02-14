@@ -1,4 +1,4 @@
-var allowedPages = ['home', 'profil', 'contact'];
+var allowedPages = ['home', 'profil'];
 
 $(document).ready(function(){
     var url = window.location.href;

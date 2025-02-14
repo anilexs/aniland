@@ -13,15 +13,16 @@ require_once "inc/header.php"; ?>
         <div class="rightOpt p-<?= $geo ?> on">
             <?php require_once 'load/'.$geo.'.php'; ?>
         </div>
-
-        <?php foreach ($allowedPages as $page) {
+        <?php } else { ?>
+            <div class="rightOpt p-error on">
+                errorsasasasasasasasasasasasa
+            </div>
+    <?php }
+    
+     foreach ($allowedPages as $page) {
             if($page !== $geo){ ?>
                 <div class="rightOpt p-<?= $page ?> off"></div>
             <?php }
         } ?>
-    <?php } else {
-        echo "Page introuvable";
-    }
-    ?>
 </div>
 <?php require_once "inc/footer.php"; ?>

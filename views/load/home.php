@@ -1,1 +1,3 @@
-Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo deleniti eius eos fugit cumque, vero illo explicabo non dicta eaque maiores recusandae blanditiis quis voluptatem consequatur praesentium mollitia velit incidunt molestiae! Similique cumque, facere perferendis id doloribus possimus omnis at, quos, rerum exercitationem maiores. Dolore rem animi iure libero nostrum.
+<div class="home">
+    <img src="https://storage.googleapis.com/pod_public/1300/146228.jpg" alt="">
+</div>
