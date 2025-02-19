@@ -1,13 +1,41 @@
-var allowedPages = ['home', 'profil'];
+// var allowedPages = ['home', 'profil'];
 
-$(document).ready(function(){
+// $(document).ready(function(){
+//     var url = window.location.href;
+//     var lastSegment = url.substring(url.lastIndexOf('/') + 1);
+//     var geo = (lastSegment == '') ? 'home' : lastSegment;
+
+//     allowedPages.forEach(page => {
+//         if (page !== geo && $(".p-" + page).is(":empty")) { 
+//             $(".p-" + page).load("load/" + page + ".php");
+//         }
+//     });
+// });
+
+
+
+
+$(document).ready(function () {
+    var allowedPages = { 
+        'home': 'home', 
+        'profil': 'profil' 
+    };
+
+    var sessionStatus = $('html').data('logged');
+                
+    if (sessionStatus === 'true') {
+        console.log("Utilisateur connecté");
+    } else {
+        console.log("Aucune session active");
+    }
+
     var url = window.location.href;
     var lastSegment = url.substring(url.lastIndexOf('/') + 1);
-    var geo = (lastSegment == '') ? 'home' : lastSegment;
+    var geo = (lastSegment === '') ? 'home' : lastSegment;
 
-    allowedPages.forEach(page => {
-        if (page !== geo && $(".p-" + page).is(":empty")) { 
-            $(".p-" + page).load("load/" + page + ".php");
+    Object.entries(allowedPages).forEach(([page, val]) => {
+        if (page !== geo && $(".p-" + page).is(":empty")) {
+            $(".p-" + page).load("load/" + val + ".php");
         }
     });
 });

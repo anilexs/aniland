@@ -8,21 +8,20 @@ require_once "inc/header.php"; ?>
 </div>
 <div class="right">
     <?php
-
-    if (in_array($geo, $allowedPages) && file_exists('load/'.$geo.'.php')) { ?>
+    if (array_key_exists($geo, $allowedPages) && file_exists('load/'.$geo.'.php')) { ?>
         <div class="rightOpt p-<?= $geo ?> on">
-            <?php require_once 'load/'.$geo.'.php'; ?>
+            <?php require_once 'load/'.$allowedPages[$geo].'.php'; ?>
         </div>
-        <?php } else { ?>
-            <div class="rightOpt p-error on">
-                errorsasasasasasasasasasasasa
-            </div>
+    <?php } else { ?>
+        <div class="rightOpt p-error on">
+            errorsasasasasasasasasasasasa
+        </div>
     <?php }
-    
-     foreach ($allowedPages as $page) {
-            if($page !== $geo){ ?>
-                <div class="rightOpt p-<?= $page ?> off"></div>
-            <?php }
-        } ?>
+
+    foreach ($allowedPages as $page => $val) {
+        if ($page !== $geo) { ?> 
+            <div class="rightOpt p-<?= $page ?> off"></div>
+        <?php }
+    } ?>
 </div>
 <?php require_once "inc/footer.php"; ?>

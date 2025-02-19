@@ -1,8 +1,17 @@
 <?php
+    session_start();
     $host = "http://localhost/aniland/";
 
     $geo = !empty($_GET['g']) ? $_GET['g'] : 'home';
-    $allowedPages = ['home', 'profil']; 
+    
+    $allowedPages = [
+        "home" => "home",
+        "profil" => "profil"
+    ];
+
+    if(!isset($_COOKIE['anilandt'])){
+        $allowedPages['profil'] = 'login';
+    }
     
     $lang = isset($_COOKIE['anitrad']) ? $_COOKIE['anitrad'] : substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
     // $lang = 'fr';
@@ -34,7 +43,7 @@
     }
 ?>
 <!DOCTYPE html>
-<html lang="<?= $lang ?>">
+<html lang="<?= $lang ?>" data-logged="<?php echo isset($_SESSION['user_id']) ? 'true' : 'false'; ?>"><head>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
